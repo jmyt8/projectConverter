@@ -1,0 +1,91 @@
+:root {
+    --color-darker: #333333;
+    --color-dark: #5b5b5b;
+    --color-light: #e5e5e5;
+    --color-lighter: #f5f5f5;
+}
+* {
+    padding: 0;
+    margin: 0;
+    background: inherit;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 24px;
+}
+input {
+    border: none;
+    text-align: center;
+}
+
+/* Selections */
+.selections {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transform: translateY(-100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    background: var(--color-lighter);
+    font-weight: 600;
+}
+.selections.expand {
+    transform: translateY(0);
+}
+.selections li {
+    list-style: none;
+    padding: 15px;
+}
+/* Specifics */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+    text-align: center;
+}
+.col-value {
+    width: calc(100% - 80px);
+}
+.col-unit, .col-arrow {
+    width: 60px;
+    text-align: center;
+}
+.btn-unit {
+    line-height: 60px;
+    border-radius: 15px;
+}
+#cat {
+    height: 115px;
+}
+#input {
+    background: var(--color-lighter);
+    height: 150px;
+}
+#input .col-value {
+    font-size: 64px;
+}
+#input .btn-unit {
+    line-height: 80px;
+    width: 80px;
+    background: var(--color-light);
+}
+#output {
+    background-color: var(--color-darker);
+    color: var(--color-lighter);
+}
+.active-value {
+    font-weight: 600;
+}
+.active-unit .btn-unit {
+    background: var(--color-dark);
+}
