@@ -14,13 +14,4 @@ export default class modelConvert {
         return outputValue;
     }
 
-    
-};
-
-export const copyValue = element => {
-    document.execCommand('copy');
-    document.addEventListener('copy', e => {
-        e.preventDefault();
-        e.clipboardData.setData('text/plain', element.textContent )
-    })
 };

@@ -2,7 +2,6 @@
 import { viewBlock, baseData } from './viewBase';
 import * as view from './view';
 import modelConvert from './model';
-import copyValue from './model';
 
 /** Global state
  * 
@@ -107,6 +106,15 @@ viewBlock.inputValue.oninput = () => {
 }
 
 /** C. Copy */
-document.addEventListener('click', element => {
-    copyValue(element);
+
+const copyValue = () => {
+    document.execCommand('copy');
+    document.addEventListener('copy', e => {
+        e.preventDefault();
+        e.clipboardData.setData('text/plain', e.target.textContent )
+    })
+};
+
+document.addEventListener('click', () => {
+    copyValue();
 });

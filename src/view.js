@@ -31,7 +31,7 @@ export const updateMainOutput = (val) => {
 export const updateAdditionalOutput = (val, unit) => {
     const markup = `
     <li class="row">
-        <span class="col-value output-value state-value">${val}</span>
+        <span class="col-value output-value state-value ${unit}">${val}</span>
         <span class="col-unit btn-unit output-unit">${unit}</span>
     </li>
     `;
